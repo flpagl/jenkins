@@ -3,7 +3,7 @@ pipeline {
     
     parameters {
         choice(
-            choices: ['dev', 'qa', 'prod'],
+            choices: ['aquecer_chip', 'buscar_contato_wpp', 'disparo_manual'],
             description: 'Choose environment to deploy',
             name: 'DEPLOY_ENV'
         )
@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy') {
             when {
                 expression {
-                    params.DEPLOY_ENV == 'dev' || params.DEPLOY_ENV == 'qa' || params.DEPLOY_ENV == 'prod'
+                    params.DEPLOY_ENV == 'aquecer_chip' || params.DEPLOY_ENV == 'buscar_contato_wpp' || params.DEPLOY_ENV == 'disparo_manual'
                 }
             }
             steps {
