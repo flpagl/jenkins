@@ -4,7 +4,7 @@ pipeline {
     parameters {
         choice(
             choices: ['aquecer_chip', 'buscar_contato_wpp', 'disparo_manual'],
-            description: 'Choose environment to deploy',
+            description: 'meu saco',
             name: 'DEPLOY_ENV'
         )
         string(
