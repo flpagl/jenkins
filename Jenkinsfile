@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                     // Perform build steps, assuming Maven for this example
-                    sh 'mvn clean package'
+                    // sh 'mvn clean package'
                 }
             }
         }
