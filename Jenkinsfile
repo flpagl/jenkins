@@ -7,16 +7,16 @@ pipeline {
             description: 'meu saco',
             name: 'DEPLOY_ENV'
         )
-        string(
-            defaultValue: '1.0',
-            description: 'Version to deploy',
-            name: 'CHIP'
-        )
-        booleanParam(
-            defaultValue: true,
-            description: 'Should clean workspace before build?',
-            name: 'CLEAN_WORKSPACE'
-        )
+        // string(
+        //     defaultValue: '1.0',
+        //     description: 'Version to deploy',
+        //     name: 'CHIP'
+        // )
+        // booleanParam(
+        //     defaultValue: true,
+        //     description: 'Should clean workspace before build?',
+        //     name: 'CLEAN_WORKSPACE'
+        // )
     }
     
     stages {
