@@ -3,7 +3,7 @@ pipeline {
     
     parameters {
         choice(
-            choices: ['aquecer_chip', 'buscar_contato_wpp', 'disparo_manual'],
+            choices: ['aquecer_chip', 'buscar_contato_wpp', 'dispai'],
             description: 'meu saco',
             name: 'DEPLOY_ENV'
         )
@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy') {
             when {
                 expression {
-                    params.DEPLOY_ENV == 'aquecer_chip' || params.DEPLOY_ENV == 'buscar_contato_wpp' || params.DEPLOY_ENV == 'disparo_manual'
+                    params.DEPLOY_ENV == 'aquecer_chip' || params.DEPLOY_ENV == 'buscar_contato_wpp' || params.DEPLOY_ENV == 'dispai'
                 }
             }
             steps {
