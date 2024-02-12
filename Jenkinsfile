@@ -20,30 +20,30 @@ pipeline {
     }
     
     stages {
-        stage('Checkout') {
-            steps {
-                script {
-                    // Checkout your repository
-                    checkout scm
-                }
-            }
-        }
+        // stage('Checkout') {
+        //     steps {
+        //         script {
+        //             // Checkout your repository
+        //             checkout scm
+        //         }
+        //     }
+        // }
         
-        stage('Build') {
-            steps {
-                script {
-                    // Perform build steps, assuming Maven for this example
-                    // sh 'mvn clean package'
-                }
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         script {
+        //             // Perform build steps, assuming Maven for this example
+        //             // sh 'mvn clean package'
+        //         }
+        //     }
+        // }
         
         stage('Deploy') {
-            when {
-                expression {
-                    params.DEPLOY_ENV == 'aquecer_chip' || params.DEPLOY_ENV == 'buscar_contato_wpp' || params.DEPLOY_ENV == 'dispai'
-                }
-            }
+            // when {
+            //     expression {
+            //         params.DEPLOY_ENV == 'aquecer_chip' || params.DEPLOY_ENV == 'buscar_contato_wpp' || params.DEPLOY_ENV == 'dispai'
+            //     }
+            // }
             steps {
                 script {
                     if (params.CLEAN_WORKSPACE) {
