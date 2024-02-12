@@ -39,11 +39,11 @@ pipeline {
         // }
         
         stage('Deploy') {
-            // when {
-            //     expression {
-            //         params.DEPLOY_ENV == 'aquecer_chip' || params.DEPLOY_ENV == 'buscar_contato_wpp' || params.DEPLOY_ENV == 'dispai'
-            //     }
-            // }
+            when {
+                expression {
+                    params.DEPLOY_ENV == 'aquecer_chip'
+                }
+            }
             steps {
                 script {
                     if (params.CLEAN_WORKSPACE) {
