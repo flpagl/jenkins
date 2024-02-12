@@ -10,7 +10,7 @@ pipeline {
         string(
             defaultValue: '1.0',
             description: 'Version to deploy',
-            name: 'VERSION'
+            name: 'CHIP'
         )
         booleanParam(
             defaultValue: true,
